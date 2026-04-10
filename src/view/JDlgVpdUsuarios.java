@@ -86,7 +86,6 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jTxtNome = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jFmtCpf = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jFmtDataNascimento = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
@@ -102,6 +101,7 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
         jTxtApelido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jCboNivel = new javax.swing.JComboBox<>();
+        jFmtCpf = new javax.swing.JFormattedTextField();
 
         jLabel1.setText("Nome");
 
@@ -129,6 +129,11 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
         jPwfSenha.setText("jPasswordField1");
 
         jChbAtivo.setText("Ativo");
+        jChbAtivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jChbAtivoActionPerformed(evt);
+            }
+        });
 
         jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/incluir.png"))); // NOI18N
         jBtnIncluir.setText("Incluir");
@@ -193,16 +198,6 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTxtApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jFmtCpf)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTxtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
@@ -216,27 +211,40 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(jCboNivel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(187, 187, 187)
-                        .addComponent(jLabel5))
-                    .addComponent(jLabel11)
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBtnIncluir)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBtnAlterar)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBtnExcluir)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBtnConfirmar)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBtnCancelar))
-                            .addComponent(jPwfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel10)
+                                .addGap(187, 187, 187)
+                                .addComponent(jLabel5))
+                            .addComponent(jLabel11)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jBtnIncluir)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBtnAlterar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBtnExcluir)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBtnConfirmar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBtnCancelar))
+                                    .addComponent(jPwfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jChbAtivo)
+                                    .addComponent(jBtnPesquisar))))
+                        .addGap(0, 6, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jChbAtivo)
-                            .addComponent(jBtnPesquisar))))
+                            .addComponent(jTxtApelido, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jFmtCpf))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -320,6 +328,10 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
         JOptionPane.showInputDialog(null, "Entre com a chave primária");
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
+    private void jChbAtivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChbAtivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jChbAtivoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -371,7 +383,7 @@ public class JDlgVpdUsuarios extends javax.swing.JDialog {
     private javax.swing.JButton jBtnPesquisar;
     private javax.swing.JComboBox<String> jCboNivel;
     private javax.swing.JCheckBox jChbAtivo;
-    private javax.swing.JTextField jFmtCpf;
+    private javax.swing.JFormattedTextField jFmtCpf;
     private javax.swing.JFormattedTextField jFmtDataNascimento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

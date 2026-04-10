@@ -128,10 +128,14 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
     private void JMnuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMnuUsuarioActionPerformed
         // TODO add your handling code here:
+        JDlgVpdUsuarios jDlgVpdUsuarios = new JDlgVpdUsuarios(null, true);
+        jDlgVpdUsuarios.setVisible(true);
     }//GEN-LAST:event_JMnuUsuarioActionPerformed
 
     private void JMnuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMnuClienteActionPerformed
         // TODO add your handling code here:
+        JDlgVpdClientes jDlgVpdClientes = new JDlgVpdClientes(null, true);
+        jDlgVpdClientes.setVisible(true);
     }//GEN-LAST:event_JMnuClienteActionPerformed
 
     private void JMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMnuSairActionPerformed
