@@ -71,6 +71,11 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         JMnuFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Fornecedor.png"))); // NOI18N
         JMnuFornecedor.setMnemonic('f');
         JMnuFornecedor.setText("Fornecedor");
+        JMnuFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMnuFornecedorActionPerformed(evt);
+            }
+        });
         JMnuCadastro.add(JMnuFornecedor);
 
         JMnuProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -142,6 +147,12 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_JMnuSairActionPerformed
+
+    private void JMnuFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMnuFornecedorActionPerformed
+        // TODO add your handling code here:
+        JDlgVpdFornecedor jDlgVpdFornecedor = new JDlgVpdFornecedor(null, true);
+        jDlgVpdFornecedor.setVisible(true);
+    }//GEN-LAST:event_JMnuFornecedorActionPerformed
 
     /**
      * @param args the command line arguments
