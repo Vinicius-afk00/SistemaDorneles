@@ -34,6 +34,7 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         JMnuCliente = new javax.swing.JMenuItem();
         JMnuFornecedor = new javax.swing.JMenuItem();
         JMnuProduto = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         JMnuSair = new javax.swing.JMenuItem();
         JMnuMovimento = new javax.swing.JMenu();
@@ -82,7 +83,22 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         JMnuProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/produto.png"))); // NOI18N
         JMnuProduto.setMnemonic('p');
         JMnuProduto.setText("Produto");
+        JMnuProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMnuProdutoActionPerformed(evt);
+            }
+        });
         JMnuCadastro.add(JMnuProduto);
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/asian-customer-woman-makes-contactless-260nw-2715079657.png"))); // NOI18N
+        jMenuItem1.setText("Vendedor");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        JMnuCadastro.add(jMenuItem1);
         JMnuCadastro.add(jSeparator1);
 
         JMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -154,6 +170,18 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jDlgVpdFornecedor.setVisible(true);
     }//GEN-LAST:event_JMnuFornecedorActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        JDlgVpdVendedor jDlgVpdVendedor = new JDlgVpdVendedor(null, true);
+        jDlgVpdVendedor.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void JMnuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMnuProdutoActionPerformed
+        // TODO add your handling code here:
+        JDlgVpdProduto jDlgVpdProduto = new JDlgVpdProduto(null, true);
+        jDlgVpdProduto.setVisible(true);
+    }//GEN-LAST:event_JMnuProdutoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -200,6 +228,7 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem JMnuUsuario;
     private javax.swing.JMenuItem JMnuVenda;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
