@@ -19,8 +19,8 @@ public class JDlgVpdVendedor extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setTitle("Cadastro de Vendedores");
-        
         setLocationRelativeTo(null);
+        
         jTxtCodigo.setEnabled(false);
         jTxtEmail.setEnabled(false);
         jTxtNome.setEnabled(false);

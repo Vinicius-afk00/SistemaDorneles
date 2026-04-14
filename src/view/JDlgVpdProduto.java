@@ -26,8 +26,12 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jTxtCodigo.setEnabled(false);
         jTxtFichaTecnica.setEnabled(false);
         jTxtNome.setEnabled(false);
+        jTxtPlacaVideo.setEnabled(false);
+        jTxtProcessador.setEnabled(false);
         jBtnConfirmar.setEnabled(false);
         jBtnCancelar.setEnabled(false);
+        jCboArmazenamento.setEnabled(false);
+        jCboMemoriaRam.setEnabled(false);
     }
     
     public void habilitar(){
@@ -36,8 +40,12 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jTxtCodigo.setEnabled(true);
         jTxtFichaTecnica.setEnabled(true);
         jTxtNome.setEnabled(true);
+        jTxtPlacaVideo.setEnabled(true);
+        jTxtProcessador.setEnabled(true);
         jBtnConfirmar.setEnabled(true);
         jBtnCancelar.setEnabled(true);
+        jCboArmazenamento.setEnabled(true);
+        jCboMemoriaRam.setEnabled(true);
         
         jBtnIncluir.setEnabled(false);
         jBtnAlterar.setEnabled(false);
@@ -51,8 +59,12 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jTxtCodigo.setEnabled(false);
         jTxtFichaTecnica.setEnabled(false);
         jTxtNome.setEnabled(false);
+        jTxtPlacaVideo.setEnabled(false);
+        jTxtProcessador.setEnabled(false);
         jBtnConfirmar.setEnabled(false);
         jBtnCancelar.setEnabled(false);
+        jCboArmazenamento.setEnabled(false);
+        jCboMemoriaRam.setEnabled(false);
         
         jBtnIncluir.setEnabled(true);
         jBtnAlterar.setEnabled(true);
@@ -84,6 +96,14 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jBtnPesquisar = new javax.swing.JButton();
         jFmtValorDiaria = new javax.swing.JFormattedTextField();
         jChbDisponivel = new javax.swing.JCheckBox();
+        jLabel5 = new javax.swing.JLabel();
+        jTxtProcessador = new javax.swing.JTextField();
+        jTxtPlacaVideo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jCboMemoriaRam = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jCboArmazenamento = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -145,6 +165,23 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
 
         jChbDisponivel.setText("Disponivel");
 
+        jLabel5.setText("Processador");
+
+        jLabel6.setText("Placa de Video");
+
+        jLabel7.setText("Memória Ram");
+
+        jCboMemoriaRam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jCboMemoriaRam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCboMemoriaRamActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Armazenamento");
+
+        jCboArmazenamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,6 +189,20 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 46, Short.MAX_VALUE)
+                        .addComponent(jBtnIncluir)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnAlterar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnExcluir)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnConfirmar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBtnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBtnPesquisar)
+                        .addGap(42, 42, 42))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -167,29 +218,36 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
                             .addComponent(jTxtFichaTecnica)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jFmtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTxtProcessador, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTxtPlacaVideo, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4))
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jLabel5)
+                                        .addGap(149, 149, 149)
+                                        .addComponent(jLabel6)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jCboMemoriaRam, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jFmtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jChbDisponivel)
-                        .addGap(22, 22, 22))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addComponent(jBtnIncluir)
-                .addGap(18, 18, 18)
-                .addComponent(jBtnAlterar)
-                .addGap(18, 18, 18)
-                .addComponent(jBtnExcluir)
-                .addGap(18, 18, 18)
-                .addComponent(jBtnConfirmar)
-                .addGap(18, 18, 18)
-                .addComponent(jBtnCancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBtnPesquisar)
-                .addGap(40, 40, 40))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCboArmazenamento, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jChbDisponivel)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,12 +265,24 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTxtFichaTecnica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jFmtValorDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtProcessador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtPlacaVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCboMemoriaRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCboArmazenamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jChbDisponivel))
-                .addGap(45, 45, 45)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnIncluir)
                     .addComponent(jBtnAlterar)
@@ -220,7 +290,7 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
                     .addComponent(jBtnConfirmar)
                     .addComponent(jBtnCancelar)
                     .addComponent(jBtnPesquisar))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -255,6 +325,10 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         // TODO add your handling code here:
         JOptionPane.showInputDialog(null, "Entre com a chave primária");
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
+
+    private void jCboMemoriaRamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboMemoriaRamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCboMemoriaRamActionPerformed
 
     /**
      * @param args the command line arguments
@@ -305,14 +379,22 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
     private javax.swing.JButton jBtnExcluir;
     private javax.swing.JButton jBtnIncluir;
     private javax.swing.JButton jBtnPesquisar;
+    private javax.swing.JComboBox<String> jCboArmazenamento;
+    private javax.swing.JComboBox<String> jCboMemoriaRam;
     private javax.swing.JCheckBox jChbDisponivel;
     private javax.swing.JFormattedTextField jFmtValorDiaria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTxtCodigo;
     private javax.swing.JTextField jTxtFichaTecnica;
     private javax.swing.JTextField jTxtNome;
+    private javax.swing.JTextField jTxtPlacaVideo;
+    private javax.swing.JTextField jTxtProcessador;
     // End of variables declaration//GEN-END:variables
 }
