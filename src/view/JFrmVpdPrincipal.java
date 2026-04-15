@@ -8,12 +8,12 @@ package view;
  *
  * @author u08538003160
  */
-public class JFrmPrincipal extends javax.swing.JFrame {
+public class JFrmVpdPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form JFrmPrincipal
      */
-    public JFrmPrincipal() {
+    public JFrmVpdPrincipal() {
         initComponents();
         setTitle("Sistema de Aluguel de Computadores");
         setExtendedState(MAXIMIZED_BOTH);
@@ -199,20 +199,21 @@ public class JFrmPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmVpdPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmVpdPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmVpdPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmVpdPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrmPrincipal().setVisible(true);
+                new JFrmVpdPrincipal().setVisible(true);
             }
         });
     }
