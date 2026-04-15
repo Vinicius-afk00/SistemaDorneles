@@ -92,6 +92,7 @@ public class JFrmVpdPrincipal extends javax.swing.JFrame {
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/asian-customer-woman-makes-contactless-260nw-2715079657.png"))); // NOI18N
+        jMenuItem1.setMnemonic('v');
         jMenuItem1.setText("Vendedor");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
