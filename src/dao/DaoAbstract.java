@@ -5,7 +5,7 @@
 package dao;
 
 /**
- * CRUD
+ *
  * @author u08538003160
  */
 public abstract class DaoAbstract {

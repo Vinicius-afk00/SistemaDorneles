@@ -8,8 +8,7 @@ package dao;
  *
  * @author u08538003160
  */
-public class DaoMpvUsuarios extends DaoAbstract{
-
+public class DaoVpdUsuarios extends DaoAbstract {
     @Override
     public void insert(Object object) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -34,5 +33,4 @@ public class DaoMpvUsuarios extends DaoAbstract{
     public Object listAll() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
 }
