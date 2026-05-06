@@ -2,26 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package dao;
+package testes;
 
-import bean.VpdUsuarios;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import testes.JdbcSelect;
 
 /**
  *
  * @author u08538003160
  */
-public class DaoVpdUsuarios extends DaoAbstract {
-    @Override
-    public void insert(Object object) {
-        VpdUsuarios vpdUsuarios = (VpdUsuarios) object;
-       try {
+public class JdbcSelect {
+    public static void main(String[] args) {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             String url, user, password;
             url = "jdbc:mysql://10.7.0.51:33062/db_vinicius_dorneles";
@@ -29,42 +26,19 @@ public class DaoVpdUsuarios extends DaoAbstract {
             password = "vinicius_dorneles";
             Connection cnt;
             cnt = DriverManager.getConnection(url, user, password);
-            String sql = "insert into vpd_usuarios values(?,?,?,?,?,?,?,?)";
+            String sql = "select * from vpd_usuarios";
             PreparedStatement pst = cnt.prepareStatement(sql);
-            pst.setInt(1, vpdUsuarios.getVpdIdUsuarios());
-            pst.setString(2, vpdUsuarios.getVpdNome());
-            pst.setString(3, vpdUsuarios.getVpdApelido());
-            pst.setString(4, vpdUsuarios.getVpdCpf());
-            pst.setDate(5, null);//vpd_dataNascimento
-            pst.setInt(6, vpdUsuarios.getVpdNivel());
-            pst.setString(7, vpdUsuarios.getVpdSenha());
-            pst.setString(8, vpdUsuarios.getVpdAtivo());
-            pst.executeUpdate();
-            
+            //pst.setInt(1, 503);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next() == true) {
+                System.out.println("codigo:" + rs.getInt("vpd_id_usuario"));
+                System.out.println("nome:" + rs.getString("vpd_nome"));;
+            }
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(JdbcSelect.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(JdbcSelect.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    @Override
-    public void update(Object object) {
-        
-    }
-
-    @Override
-    public void delete(Object object) {
-        
-    }
-
-    @Override
-    public Object list(int id) {
-        return null;
-    }
-
-    @Override
-    public Object listAll() {
-        return null;
+        System.out.println("Conectou");
     }
 }
