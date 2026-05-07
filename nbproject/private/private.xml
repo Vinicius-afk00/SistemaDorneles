@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/dao/DaoVpdUsuarios.java</file>
-            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/bean/VpdFornecedor.java</file>
-            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/bean/VpdVendedor.java</file>
-            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/bean/VpdUsuarios.java</file>
+            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/testes/JdbcCrud.java</file>
+            <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/testes/JdbcSelect.java</file>
             <file>file:/C:/Users/u08538003160/Documents/NetBeansProjects/SistemaDorneles/src/bean/VpdClientes.java</file>
         </group>
     </open-files>

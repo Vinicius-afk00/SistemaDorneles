@@ -13,8 +13,8 @@ public class VpdCompraProduto {
     private int vpd_fk_compra;
     private int vpd_fk_produto;
     private int vpd_quantidade;
-    private int vpd_custoUnitario;
-    private int vpd_custoTotalItem;
+    private double vpd_custoUnitario;
+    private double vpd_custoTotalItem;
     private String vpd_loteFabricacao;
     
     public int getVpdIdComprasProd(){
@@ -49,19 +49,19 @@ public class VpdCompraProduto {
         this.vpd_quantidade = vpd_quantidade;
     }
     
-    public int getVpdCustoUni(){
+    public double getVpdCustoUni(){
         return vpd_custoUnitario;
     }
     
-    public void setVpdCustoUni(int vpd_custoUnitario){
+    public void setVpdCustoUni(double vpd_custoUnitario){
         this.vpd_custoUnitario = vpd_custoUnitario;
     }
     
-    public int getVpdCustoTotal(){
+    public double getVpdCustoTotal(){
         return vpd_custoTotalItem;
     }
     
-    public void setVpdCustoTotal(int vpd_custoTotalItem){
+    public void setVpdCustoTotal(double vpd_custoTotalItem){
         this.vpd_custoTotalItem = vpd_custoTotalItem;
     }
     

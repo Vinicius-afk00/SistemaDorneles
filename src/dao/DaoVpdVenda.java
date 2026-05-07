@@ -39,8 +39,8 @@ public class DaoVpdVenda extends DaoAbstract{
             pst.setDate(5, null);//vpd_data_venda
             pst.setDate(6, null);//vpd_data_inicio
             pst.setDate(7, null);//vpd_data_final
-            pst.setInt(8, vpdVenda.getVpdValorTotal());
-            pst.setInt(9, vpdVenda.getVpdValorDesconto());
+            pst.setDouble(8, vpdVenda.getVpdValorTotal());
+            pst.setDouble(9, vpdVenda.getVpdValorDesconto());
             pst.setString(10, vpdVenda.getVpdStatusPaga());
             pst.setString(11, vpdVenda.getVpdStatusVenda());
             pst.executeUpdate();

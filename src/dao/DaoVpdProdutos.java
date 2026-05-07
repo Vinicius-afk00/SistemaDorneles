@@ -36,7 +36,7 @@ public class DaoVpdProdutos extends DaoAbstract{
             pst.setInt(2, vpdProduto.getVpdFkFornecedor());
             pst.setString(3, vpdProduto.getVpdNome());
             pst.setString(4, vpdProduto.getVpdFichaTecnica());
-            pst.setInt(5, vpdProduto.getVpdValorDiaria());
+            pst.setDouble(5, vpdProduto.getVpdValorDiaria());
             pst.setString(6, vpdProduto.getVpdDisponivel());
             pst.setString(7, vpdProduto.getVpdProcessador());
             pst.setString(8, vpdProduto.getVpdPlacaVideo());

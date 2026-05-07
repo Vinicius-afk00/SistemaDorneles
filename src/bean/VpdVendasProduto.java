@@ -13,8 +13,8 @@ public class VpdVendasProduto {
     private int vpd_fk_vendas;
     private int vpd_fk_produto;
     private int vpd_quantidade;
-    private int vpd_valor_unitario;
-    private int vpd_sub_total;
+    private double vpd_valor_unitario;
+    private double vpd_sub_total;
     private String vpd_observacoes_item;
     
     public int getVpdIdVendasProduto(){
@@ -49,19 +49,19 @@ public class VpdVendasProduto {
         this.vpd_quantidade = vpd_quantidade;
     }
     
-    public int getVpdIdValorUnitario(){
+    public double getVpdIdValorUnitario(){
         return vpd_valor_unitario;
     }
     
-    public void setVpdValorUnitario(int vpd_valor_unitario){
+    public void setVpdValorUnitario(double vpd_valor_unitario){
         this.vpd_valor_unitario = vpd_valor_unitario;
     }
     
-    public int getVpdSubTotal(){
+    public double getVpdSubTotal(){
         return vpd_sub_total;
     }
     
-    public void setVpdSubTotal(int vpd_sub_total){
+    public void setVpdSubTotal(double vpd_sub_total){
         this.vpd_sub_total = vpd_sub_total;
     }
     

@@ -36,8 +36,8 @@ public class DaoVpdVendasProduto extends DaoAbstract{
             pst.setInt(2, vpdVendasProduto.getVpdFkVendas());
             pst.setInt(3, vpdVendasProduto.getVpdFkProduto());
             pst.setInt(4, vpdVendasProduto.getVpdQuantidade());
-            pst.setInt(5, vpdVendasProduto.getVpdIdValorUnitario());
-            pst.setInt(6, vpdVendasProduto.getVpdSubTotal());
+            pst.setDouble(5, vpdVendasProduto.getVpdIdValorUnitario());
+            pst.setDouble(6, vpdVendasProduto.getVpdSubTotal());
             pst.setString(7, vpdVendasProduto.getVpdObservacoesItem());
             pst.executeUpdate();
             

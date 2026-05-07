@@ -16,7 +16,7 @@ public class VpdCompras {
     private int vpd_fk_usuario;
     private Date vpd_dataCompra;
     private String vpd_numeroNotaFiscal;
-    private int vpd_valorToal;
+    private double vpd_valorToal;
     private String vpd_formaPagamento;
     private String vpd_observacoes;
     
@@ -60,11 +60,11 @@ public class VpdCompras {
         this.vpd_numeroNotaFiscal = vpd_numeroNotaFiscal;
     }
     
-    public int getVpdValorTotal(){
+    public double getVpdValorTotal(){
         return vpd_valorToal;
     }
     
-    public void setVpdValorTotal(int vpd_valorToal){
+    public void setVpdValorTotal(double vpd_valorToal){
         this.vpd_valorToal = vpd_valorToal;
     }
     

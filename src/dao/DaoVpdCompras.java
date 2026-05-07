@@ -37,7 +37,7 @@ public class DaoVpdCompras extends DaoAbstract{
             pst.setInt(3, vpdCompras.getVpdFkUsuario());
             pst.setDate(4, null);//vpd_dataCompra
             pst.setString(5, vpdCompras.getVpdNotaFiscal());
-            pst.setInt(6, vpdCompras.getVpdValorTotal());
+            pst.setDouble(6, vpdCompras.getVpdValorTotal());
             pst.setString(7, vpdCompras.getVpdFormaPagamento());
             pst.setString(8, vpdCompras.getVpdObservacoes());
             pst.executeUpdate();

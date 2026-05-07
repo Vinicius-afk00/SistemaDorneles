@@ -18,8 +18,8 @@ public class VpdVenda {
     private Date vpd_data_venda;
     private Date vpd_data_inicio;
     private Date vpd_data_final;
-    private int vpd_valor_total;
-    private int vpd_valor_desconto;
+    private double vpd_valor_total;
+    private double vpd_valor_desconto;
     private String vpd_status_pagamento;
     private String vpd_status_venda;
     
@@ -79,19 +79,19 @@ public class VpdVenda {
         this.vpd_data_final = vpd_data_final;
     }
     
-    public int getVpdValorTotal(){
+    public double getVpdValorTotal(){
         return vpd_valor_total;
     }
     
-    public void setVpdValorTotal(int vpd_valor_total){
+    public void setVpdValorTotal(double vpd_valor_total){
         this.vpd_valor_total = vpd_valor_total;
     }
     
-    public int getVpdValorDesconto(){
+    public double getVpdValorDesconto(){
         return vpd_valor_desconto;
     }
     
-    public void setVpdValorDesconto(int vpd_valor_desconto){
+    public void setVpdValorDesconto(double vpd_valor_desconto){
         this.vpd_valor_desconto = vpd_valor_desconto;
     }
     

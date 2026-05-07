@@ -13,7 +13,7 @@ public class VpdProduto {
     private int vpd_fk_fornecedores;
     private String vpd_nome;
     private String vpd_ficha_tecnica;
-    private int vpd_valor_diaria;
+    private double vpd_valor_diaria;
     private String vpd_disponivel;
     private String vpd_processador;
     private String vpd_placaVideo;
@@ -52,11 +52,11 @@ public class VpdProduto {
         this.vpd_ficha_tecnica = vpd_ficha_tecnica;
     }
     
-    public int getVpdValorDiaria(){
+    public double getVpdValorDiaria(){
         return vpd_valor_diaria;
     }
     
-    public void setVpdValorDiaria(int vpd_valor_diaria){
+    public void setVpdValorDiaria(double vpd_valor_diaria){
         this.vpd_valor_diaria = vpd_valor_diaria;
     }
     

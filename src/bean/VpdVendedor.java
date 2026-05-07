@@ -17,7 +17,7 @@ public class VpdVendedor {
     private String vpd_cpf;
     private String vpd_email;
     private String vpd_telefone;
-    private int vpd_salario;
+    private double vpd_salario;
     private String vpd_contrato;
     private Date vpd_data_contratacao;
     private String vpd_ativo;
@@ -62,11 +62,11 @@ public class VpdVendedor {
         this.vpd_telefone = vpd_telefone;
     }
     
-    public int getVpdSalario(){
+    public double getVpdSalario(){
         return vpd_salario;
     }
     
-    public void setVpdSalario(int vpd_salario){
+    public void setVpdSalario(double vpd_salario){
         this.vpd_salario = vpd_salario;
     }
     

@@ -37,7 +37,7 @@ public class DaoVpdVendedor extends DaoAbstract{
             pst.setString(3, vpdVendedor.getVpdCpf());
             pst.setString(4, vpdVendedor.getVpdEmail());
             pst.setString(5, vpdVendedor.getVpdTelefone());
-            pst.setInt(6, vpdVendedor.getVpdSalario());
+            pst.setDouble(6, vpdVendedor.getVpdSalario());
             pst.setString(7, vpdVendedor.getVpdContrato());
             pst.setDate(8, null);//vpd_data_contratacao
             pst.setString(9, vpdVendedor.getVpdAtivo());
