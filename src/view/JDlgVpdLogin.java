@@ -105,7 +105,10 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
         String usuarioCorreto = "viniciusDorneles";
         String senhaCorreta = "0123456789";
         
-        if(usuarioCorreto.equalsIgnoreCase(usuarioCorreto) && senhaCorreta.equalsIgnoreCase(senhaCorreta)){
+        String usuarioDigitado = jTxtUsuario.getText();
+        String senhaDigitada = jTxtSenha.getText();
+        
+        if(usuarioDigitado.equals(usuarioCorreto) && senhaDigitada.equals(senhaCorreta)){
             JFrmVpdPrincipal jFrmVpdPrincipal = new JFrmVpdPrincipal();
             jFrmVpdPrincipal.setVisible(true);
             this.dispose();
