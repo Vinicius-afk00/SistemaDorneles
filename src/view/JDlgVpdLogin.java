@@ -33,7 +33,7 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTxtEmail = new javax.swing.JTextField();
+        jTxtUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTxtSenha = new javax.swing.JTextField();
         jBtnEntrar = new javax.swing.JButton();
@@ -42,7 +42,7 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
 
         jLabel1.setText("Faça seu Login");
 
-        jLabel2.setText("Email");
+        jLabel2.setText("Usuario");
 
         jLabel3.setText("Senha");
 
@@ -59,7 +59,7 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTxtEmail, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTxtUsuario, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTxtSenha)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,7 +87,7 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTxtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTxtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -161,7 +161,7 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTxtEmail;
     private javax.swing.JTextField jTxtSenha;
+    private javax.swing.JTextField jTxtUsuario;
     // End of variables declaration//GEN-END:variables
 }
