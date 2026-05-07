@@ -24,6 +24,7 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jChbDisponivel.setEnabled(false);
         jFmtValorDiaria.setEnabled(false);
         jTxtCodigo.setEnabled(false);
+        jTxtCodFornecedor.setEnabled(false);
         jTxtFichaTecnica.setEnabled(false);
         jTxtNome.setEnabled(false);
         jTxtPlacaVideo.setEnabled(false);
@@ -38,6 +39,7 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jChbDisponivel.setEnabled(true);
         jFmtValorDiaria.setEnabled(true);
         jTxtCodigo.setEnabled(true);
+        jTxtCodFornecedor.setEnabled(true);
         jTxtFichaTecnica.setEnabled(true);
         jTxtNome.setEnabled(true);
         jTxtPlacaVideo.setEnabled(true);
@@ -57,6 +59,7 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jChbDisponivel.setEnabled(false);
         jFmtValorDiaria.setEnabled(false);
         jTxtCodigo.setEnabled(false);
+        jTxtCodFornecedor.setEnabled(false);
         jTxtFichaTecnica.setEnabled(false);
         jTxtNome.setEnabled(false);
         jTxtPlacaVideo.setEnabled(false);
@@ -104,6 +107,8 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
         jCboMemoriaRam = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jCboArmazenamento = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jTxtCodFornecedor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -182,6 +187,14 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
 
         jCboArmazenamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel9.setText("Código do Fornecedor");
+
+        jTxtCodFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtCodFornecedorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -240,11 +253,15 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCboArmazenamento, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel8)
+                                .addComponent(jLabel9)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCboArmazenamento, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTxtCodFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jChbDisponivel)))
                         .addContainerGap())))
@@ -277,11 +294,14 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
                     .addComponent(jTxtPlacaVideo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCboMemoriaRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCboArmazenamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jChbDisponivel))
+                    .addComponent(jChbDisponivel)
+                    .addComponent(jTxtCodFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtnIncluir)
@@ -329,6 +349,10 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
     private void jCboMemoriaRamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCboMemoriaRamActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCboMemoriaRamActionPerformed
+
+    private void jTxtCodFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtCodFornecedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtCodFornecedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -391,6 +415,8 @@ public class JDlgVpdProduto extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTxtCodFornecedor;
     private javax.swing.JTextField jTxtCodigo;
     private javax.swing.JTextField jTxtFichaTecnica;
     private javax.swing.JTextField jTxtNome;

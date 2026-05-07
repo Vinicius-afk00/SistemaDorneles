@@ -102,10 +102,10 @@ public class JDlgVpdLogin extends javax.swing.JDialog {
 
     private void jBtnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEntrarActionPerformed
         // TODO add your handling code here:
-        String emailCorreto = "vinicius@gmail.com";
+        String usuarioCorreto = "viniciusDorneles";
         String senhaCorreta = "0123456789";
         
-        if(emailCorreto.equalsIgnoreCase(emailCorreto) && senhaCorreta.equalsIgnoreCase(senhaCorreta)){
+        if(usuarioCorreto.equalsIgnoreCase(usuarioCorreto) && senhaCorreta.equalsIgnoreCase(senhaCorreta)){
             JFrmVpdPrincipal jFrmVpdPrincipal = new JFrmVpdPrincipal();
             jFrmVpdPrincipal.setVisible(true);
             this.dispose();
